@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+#word-display {
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+}
+
+#hangman {
+    font-family: monospace;
+    white-space: pre;
+}

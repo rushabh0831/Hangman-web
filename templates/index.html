@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white flex items-center justify-center h-screen p-4">
+
+    <!-- Main Container -->
+    <div class="bg-gray-800 p-6 lg:p-10 xl:p-12 rounded-lg shadow-lg flex flex-col lg:flex-row items-center lg:items-start justify-between lg:w-[700px] xl:w-[800px]">
+
+        <!-- Left Side (Word, Guess, New Game) -->
+        <div class="text-center lg:text-left lg:w-1/2 lg:order-1">
+            <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">Hangman</h1>
+            <p id="message" class="text-red-400 font-semibold mb-2"></p>
+
+            <p class="text-lg lg:text-xl font-semibold">
+                Word: <span id="word-display" class="tracking-widest text-yellow-300"></span>
+            </p>
+            <p class="text-lg lg:text-xl">
+                Tries left: <span id="tries" class="font-bold text-green-400"></span>
+            </p>
+
+            <!-- Input and Buttons -->
+            <div class="mt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-2">
+                <input type="text" id="letter-input" maxlength="1"
+                    class="p-2 border-2 border-gray-500 bg-gray-700 text-white rounded-md w-16 sm:w-20 text-center outline-none focus:ring-2 focus:ring-yellow-400 text-lg lg:text-xl">
+                <button onclick="makeGuess()"
+                    class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 lg:px-6 lg:py-3 rounded text-sm lg:text-lg">
+                    Guess
+                </button>
+            </div>
+
+            <button onclick="startNewGame()"
+                class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 lg:px-6 lg:py-3 rounded mt-4 text-sm lg:text-lg">
+                New Game
+            </button>
+        </div>
+
+        <!-- Right Side (Hangman Image) -->
+        <div class="mt-6 lg:mt-0 lg:ml-8 lg:w-1/2 lg:order-2">
+            <img id="hangman-image" src="/static/hangman6.png" alt="Hangman Image"
+                class="w-40 sm:w-48 lg:w-64 xl:w-72 mx-auto border-4 border-gray-600 rounded-lg shadow-md">
+        </div>
+
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
